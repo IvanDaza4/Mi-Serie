@@ -1,0 +1,75 @@
+/* Fuente y reset mínimo */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; background: #0e0e12; color: #f2f2f2; }
+img { max-width: 100%; height: auto; display: block; }
+
+
+/* Contenedor */
+.container { width: 90%; max-width: 960px; margin: 0 auto; }
+
+
+/* Header y navegación */
+.header { background: #14141a; border-bottom: 1px solid #2a2a33; }
+.logo { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1.2rem; padding: 12px 0; }
+.logo-img { width: 32px; height: 32px; object-fit: contain; }
+.nav { display: flex; gap: 14px; }
+.nav a { color: #e8e8ff; text-decoration: none; padding: 10px 8px; border-radius: 6px; }
+.nav a:hover { background: #1e1e27; }
+.nav a.active { background: #b10f2e; color: #fff; }
+
+
+/* Contenido */
+h2 { margin-top: 20px; }
+.hero { margin: 18px 0; }
+.hero img { border-radius: 8px; border: 2px solid #2a2a33; }
+.texto p { margin-bottom: 12px; }
+
+
+/* Personajes */
+.personaje { display: flex; gap: 16px; background: #14141a; border: 1px solid #2a2a33; border-radius: 10px; padding: 12px; margin: 12px 0; }
+.personaje img { width: 140px; border-radius: 8px; }
+.personaje h3 { margin: 0 0 8px 0; }
+
+
+/* Videos */
+.videos { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.video { background: #14141a; border: 1px solid #2a2a33; border-radius: 10px; padding: 12px; }
+.video iframe { width: 100%; height: 315px; }
+
+
+/* Footer */
+.footer { margin-top: 30px; background: #14141a; border-top: 1px solid #2a2a33; }
+.footer p { text-align: center; padding: 14px 0; margin: 0; color: #cfcfe4; }
+
+
+/* Responsivo básico */
+@media (min-width: 700px) {
+.videos { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Fondo SOLO en páginas con class="fondo" */
+body.fondo {
+    background: url("images/Fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+  }
+  
+  /* Overlay oscuro solo en esas páginas */
+  body.fondo::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% opacidad */
+    z-index: -1;
+  }
+  
+  /* Caja de contenido para que el texto se lea bien */
+  body.fondo main {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+  }
