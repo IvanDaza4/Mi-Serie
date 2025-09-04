@@ -36,16 +36,92 @@ h2 { margin-top: 20px; }
 .video { background: #14141a; border: 1px solid #2a2a33; border-radius: 10px; padding: 12px; }
 .video iframe { width: 100%; height: 315px; }
 
+.footer { margin-top: 40px; 
+  background: #14141a; 
+  border-top: 1px solid #2a2a33; 
+  padding: 20px 0; } 
+  
+.footer-content { display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 16px; max-width: 960px; 
+  margin: 0 auto; text-align: center; }
 
-/* Footer */
-.footer { margin-top: 30px; background: #14141a; border-top: 1px solid #2a2a33; }
-.footer p { text-align: center; padding: 14px 0; margin: 0; color: #cfcfe4; }
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
 
-
-/* Responsivo básico */
-@media (min-width: 700px) {
-.videos { grid-template-columns: repeat(3, 1fr); }
 }
+
+.footer-form h3 {
+  color: #e8e8ff;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1e1e26;
+  color: #e8e8ff;
+  font-size: 0.9rem;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: #a8a8c0;
+}
+
+.footer-form button {
+  padding: 10px;
+  background: #b10f2e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.footer-nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; } 
+
+.footer-nav a { color: #e8e8ff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  position: relative; 
+  padding: 6px 0; 
+  transition: color 0.3s ease; } 
+
+.footer-nav a::after { content: ""; position: absolute; left: 0; 
+  bottom: -4px; width: 0%; height: 2px; background: #b10f2e; 
+  transition: width 0.3s ease; } 
+
+  .footer-nav a:hover { color: #fff; } 
+  .footer-nav a:hover::after { width: 100%; }
+
+.footer-form button:hover {
+  background: #d21f3a;
+}
+.footer-logo img { width: 400px; height: auto; transition: transform 0.3s ease; } 
+.footer-logo img:hover { transform: scale(1.05); }
+
+.footer-bottom p {text-align: center; margin-top: 50px; opacity: 50%}
+/* Ajuste en móviles */
+@media (max-width: 600px) {
+  .footer-form {
+    max-width: 100%;
+  }
+}
+
+
 
 /* Fondo SOLO en páginas con class="fondo" */
 body.fondo {
@@ -73,3 +149,4 @@ body.fondo {
     padding: 20px;
     border-radius: 12px;
   }
+

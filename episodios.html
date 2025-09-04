@@ -16,6 +16,7 @@
 <a href="index.html">Inicio</a>
 <a href="personajes.html">Personajes</a>
 <a href="episodios.html" class="active">Episodios</a>
+<a href="#form">Contacto</a>
 </nav>
 </div>
 </header>
@@ -55,9 +56,34 @@
 
 
 <footer class="footer">
-<div class="container">
-<p>Autor: Ivan Daza – 2025</p>
-</div>
+    <div class="footer-content">
+        <!-- Logo con texto alternativo descriptivo -->
+        <div class="footer-logo">
+            <img src="images/Logo.png" alt="Logo de Ivan Daza">
+        </div>
+
+        <nav class="footer-nav" aria-label="Navegación del sitio">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="episodios.html">Episodios</a></li>
+            </ul>
+        </nav>
+
+        <!-- Formulario de contacto -->
+        <form id ="from" class="footer-form" action="mailto:idaza@uade.edu.ar" method="post" aria-label="Formulario de contacto para fans">
+            <h3>¡Déjanos tu comentario!</h3>
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="3" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Créditos -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Ivan Daza. Todos los derechos reservados.</p>
+    </div>
 </footer>
 </body>
 </html>
